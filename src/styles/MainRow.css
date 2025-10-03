@@ -1,0 +1,125 @@
+.feature-row {
+    display: flex;
+    min-height: 320px;
+    width: 100%;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 48px;
+}
+
+.feature-text.light {
+    background: #fff;
+    color: #000;
+}
+
+.feature-text.dark {
+    background: #000;
+    color: #fff;
+}
+
+.feature-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 340px;
+}
+
+.feature-link {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+}
+
+.invite-link {
+    background: #fff;
+    color: #000;
+    padding: 12px 28px;
+    border-radius: 2px;
+    border: none;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+.feature-text.dark .invite-link {
+    background: #000;
+    color: #fff;
+}
+
+.stories-link .arrow {
+    font-size: 1.2em;
+    margin-left: 8px;
+}
+
+.feature-img {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.feature-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .feature-row {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .feature-row.reverse {
+        flex-direction: column;
+    }
+
+    .feature-img,
+    .feature-text {
+        min-height: 240px;
+        padding: 32px 20px;
+    }
+
+    .feature-img img {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .feature-text {
+        padding: 24px 12px;
+    }
+
+    .feature-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .feature-text p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+}
